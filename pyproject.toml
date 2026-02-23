@@ -8,6 +8,9 @@ version = "0.7.3.0"
 description = "PEP 561 type stubs for python-snappy"
 readme = "README.md"
 license = { text = "MIT" }
+authors = [
+  { name = "Matthew Watkins", url = "https://github.com/matthewpwatkins" },
+]
 requires-python = ">=3.8"
 keywords = ["snappy", "compression", "type stubs", "typing", "mypy", "pyright"]
 classifiers = [
