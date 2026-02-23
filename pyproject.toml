@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "snappy-stubs"
-version = "0.7.3.0"
+version = "0.7.3.1"
 description = "PEP 561 type stubs for python-snappy"
 readme = "README.md"
 license = { text = "MIT" }
@@ -28,4 +28,10 @@ classifiers = [
 ]
 
 [tool.hatch.build.targets.wheel]
-packages = ["snappy_stubs"]
+# Stub packages must use the hyphenated directory name so pyright discovers them.
+# Pyright looks for "snappy-stubs/" (hyphen), not "snappy_stubs/" (underscore).
+# force-include maps our source files to the correct on-disk path in the wheel.
+[tool.hatch.build.targets.wheel.force-include]
+"snappy_stubs/__init__.pyi" = "snappy-stubs/__init__.pyi"
+"snappy_stubs/snappy_formats.pyi" = "snappy-stubs/snappy_formats.pyi"
+"snappy_stubs/py.typed" = "snappy-stubs/py.typed"
