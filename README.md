@@ -1,13 +1,13 @@
-# snappy-stubs
+# types-python-snappy
 
 PEP 561 type stubs for [python-snappy](https://github.com/andrix/python-snappy).
 
 ## Installation
 
 ```bash
-pip install snappy-stubs
+pip install types-python-snappy
 # or
-uv add --dev snappy-stubs
+uv add --dev types-python-snappy
 ```
 
 ## Usage
@@ -24,12 +24,11 @@ result: bytes = snappy.decompress(data)
 
 ## Versioning
 
-Versions follow `{python_snappy_version}.{stub_revision}`. For example,
-`0.7.3.0` provides stubs for python-snappy 0.7.3, stub revision 0.
+Versions match the stubbed python-snappy release. `0.7.3.0` stubs
+python-snappy 0.7.3.
 
-## Contributing
+## Coverage
 
-Stubs cover the full public API:
 - `compress` / `decompress` / `uncompress`
 - `StreamCompressor` / `StreamDecompressor`
 - `HadoopStreamCompressor` / `HadoopStreamDecompressor`
